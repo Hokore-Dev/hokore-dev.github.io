@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ha Minjun | Game & VR Developer</title>
+  <meta name="description" content="Full-Stack VR/Game Developer & Startup Founder">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Mouse gradient -->
+  <div class="mouse-gradient" id="mouseGradient"></div>
+
+  <div class="layout">
+    <!-- Left Sidebar (sticky) -->
+    <header class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="three-container" id="threeContainer"></div>
+        <h1 class="sidebar-name">
+          <a href="#" data-i18n="sidebar.name">하민준</a>
+        </h1>
+        <h2 class="sidebar-title">CTO @ VRECORD · VR/Game Developer</h2>
+        <p class="sidebar-tagline" data-i18n="sidebar.tagline">VR과 메타버스에서 사용자 중심의 경험을 만듭니다.</p>
+
+        <nav class="sidebar-nav">
+          <a href="#about" class="nav-link active" data-section="about">
+            <span class="nav-line"></span>
+            <span class="nav-text" data-i18n="nav.about">소개</span>
+          </a>
+          <a href="#experience" class="nav-link" data-section="experience">
+            <span class="nav-line"></span>
+            <span class="nav-text" data-i18n="nav.experience">경력</span>
+          </a>
+          <a href="#projects" class="nav-link" data-section="projects">
+            <span class="nav-line"></span>
+            <span class="nav-text" data-i18n="nav.projects">프로젝트</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
+        <div class="sidebar-social">
+          <a href="https://github.com/hokore-dev" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/minjunha/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:haminjun0@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Right Content (scrollable) -->
+    <main class="content">
+
+      <!-- About -->
+      <section id="about" class="content-section">
+        <h3 class="section-label" data-i18n="nav.about">소개</h3>
+        <div class="about-text">
+          <p data-i18n="about.p1">
+            고등학교 시절 게임 개발과에서 프로그래밍을 시작해, <span class="highlight">MWC 바르셀로나</span>에 출품하며 일찍이 글로벌 무대를 경험했습니다.
+          </p>
+          <p data-i18n="about.p2">
+            <span class="highlight">위메이드플레이</span>에서 애니팡3와 일본 LINE 서비스 게임 유메이로가든(800K DAU)의 전체 개발 사이클을 경험했고, <span class="highlight">NC소프트</span>에서는 2,400만 다운로드의 K-POP 팬덤 플랫폼 '유니버스'를 개발했습니다.
+          </p>
+          <p data-i18n="about.p3">
+            블록체인 투자사 Hashed의 자회사 <span class="highlight">UNOPND</span>에서 AAA급 온체인 게임 프로젝트를 진행한 후, VR 스타트업 <span class="highlight">StasisField</span>를 공동 창업하여 VR 노래방 카테고리 시장점유율 1위를 달성했습니다.
+          </p>
+          <p data-i18n="about.p4">
+            현재 버추얼 엔터테인먼트 기업 <span class="highlight">VRECORD</span>의 CTO로서 언리얼 엔진 기반 라이브 솔루션과 3D 트래킹 시스템을 개발하고 있으며, <span class="highlight">단국대학교 산업경영학과</span>를 졸업했습니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="content-section">
+        <h3 class="section-label" data-i18n="nav.experience">경력</h3>
+
+        <a class="exp-card" href="#experience">
+          <div class="exp-date">2025.02 — Present</div>
+          <div class="exp-info">
+            <h4>CTO · <span class="exp-company">VRECORD (브이레코드)</span></h4>
+            <p data-i18n="exp.vr.desc">버추얼 엔터테인먼트 기업의 CTO로서 기술 전반을 총괄하고 있습니다. 언리얼 엔진 기반 리타게팅 라이브 솔루션, 비율 기반 간편 3D 트래킹 시스템, 모션 트래킹 학습 시스템을 개발했습니다. 버추얼과 현실의 100% 동기화를 목표로 하며, TIPS R&D 지원사업에 선정되었습니다.</p>
+            <div class="exp-tags">
+              <span>Unreal Engine</span><span>3D Tracking</span><span>Motion Capture</span><span>Live Solution</span><span>AR</span><span>Virtual Entertainment</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="exp-card" href="#experience">
+          <div class="exp-date">2021.07 — Present</div>
+          <div class="exp-info">
+            <h4>Co-founder & Developer · <span class="exp-company">StasisField</span></h4>
+            <p data-i18n="exp.sf.desc">VR 노래방 앱 'Sing Together'를 개발·운영하며 VR 카테고리 시장점유율 1위를 달성했습니다. 멀티유저 실시간 동기화 알고리즘을 설계하고, Unity, Node.js, GCP, Azure 기반 풀스택 개발을 수행했습니다. 마케팅 비용 0원으로 7,000+ 설치를 기록했습니다.</p>
+            <div class="exp-tags">
+              <span>Unity</span><span>C#</span><span>Node.js</span><span>GCP</span><span>Azure</span><span>Photon</span><span>Vivox</span><span>VR</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="exp-card" href="#experience">
+          <div class="exp-date">2021.12 — Present</div>
+          <div class="exp-info">
+            <h4>Blockchain Game Developer · <span class="exp-company">UNOPND / Hashed</span></h4>
+            <p data-i18n="exp.unopnd.desc">AAA급 온체인 게임 메타버스 'Xociety'를 개발했습니다. NFT 마켓플레이스 최적화, Three.js 기반 3D 캐릭터 커스터마이징 시스템, Facial Morph 및 Decal Shader를 구현했습니다.</p>
+            <div class="exp-tags">
+              <span>Unreal 5</span><span>C++</span><span>Three.js</span><span>TypeScript</span><span>Blockchain</span><span>NFT</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="exp-card" href="#experience">
+          <div class="exp-date">2021.04 — 2021.12</div>
+          <div class="exp-info">
+            <h4>Client Developer · <span class="exp-company">NC Soft</span></h4>
+            <p data-i18n="exp.nc.desc">K-POP 팬덤 플랫폼 'Universe'(2,400만 다운로드)를 개발했습니다. Unity + Native(Kotlin/Swift) 크로스 플랫폼 개발, 중국 본토 서비스 구축, M-Net 걸스플래닛999 실시간 투표 인프라를 구축했습니다.</p>
+            <div class="exp-tags">
+              <span>Unity</span><span>Kotlin</span><span>Swift</span><span>AWS</span><span>WeChat SDK</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="exp-card" href="#experience">
+          <div class="exp-date">2016.11 — 2021.04</div>
+          <div class="exp-info">
+            <h4>Game Client Developer · <span class="exp-company">Wemade Play</span></h4>
+            <p data-i18n="exp.wm.desc">일본 LINE 서비스 '유메이로가든'(800K DAU)의 전체 개발 사이클에 참여했습니다. 실시간 WebSocket 플러그인, 5,000개 이상의 아바타 파츠 최적화 시스템을 개발했고, '애니팡3' 콘텐츠 개발 및 라이브 서비스를 운영했습니다.</p>
+            <div class="exp-tags">
+              <span>Unity</span><span>C#</span><span>Lua</span><span>Phoenix</span><span>Elixir</span><span>WebSocket</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="exp-card" href="#experience">
+          <div class="exp-date">2014 — 2015</div>
+          <div class="exp-info">
+            <h4>Sub-client Programmer · <span class="exp-company">Billbird Startup</span></h4>
+            <p data-i18n="exp.bb.desc">4인 실시간 리듬게임 'Booster'를 개발했습니다. 서울창조경제혁신센터 선정, MWC 바르셀로나에 출품되었습니다.</p>
+            <div class="exp-tags">
+              <span>C++</span><span>Cocos2d-x</span><span>Socket.IO</span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="content-section">
+        <h3 class="section-label" data-i18n="nav.projects">프로젝트</h3>
+
+        <a class="project-card" data-project="vrecord">
+          <div class="project-img">
+            <div class="project-placeholder">
+              <span class="project-icon">🎭</span>
+              <div class="project-stats">
+                <span>TIPS R&D</span>
+                <span>Virtual Ent.</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>VRECORD Live Solution <span class="project-arrow">↗</span></h4>
+            <p data-i18n="proj.vr.desc">버추얼 엔터테인먼트를 위한 라이브 솔루션. 언리얼 엔진 기반 리타게팅 시스템, 비율 기반 간편 3D 트래킹, 모션 트래킹 학습 시스템을 개발했습니다. 버추얼 아이돌 그룹 MEU(뮤)의 라이브 콘서트와 AR 공연을 지원합니다.</p>
+            <div class="project-tags">
+              <span>Unreal Engine</span><span>Motion Capture</span><span>3D Tracking</span><span>AR</span><span>Live Streaming</span>
+            </div>
+            <p class="project-platform">Virtual Concert / Live Streaming / AR</p>
+          </div>
+        </a>
+
+        <a class="project-card" data-project="singtogether">
+          <div class="project-img">
+            <div class="project-placeholder">
+              <span class="project-icon">🎤</span>
+              <div class="project-stats">
+                <span>#1 Market Share</span>
+                <span>7K+ Installs</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Sing Together <span class="project-arrow">↗</span></h4>
+            <p data-i18n="proj.st.desc">VR 환경에서 친구들과 함께 노래를 부르는 소셜 VR 노래방 앱. 마케팅 비용 없이 커뮤니티 기반 성장으로 카테고리 1위 달성. 50,000곡 이상 글로벌 재생.</p>
+            <div class="project-tags">
+              <span>Unity</span><span>VR</span><span>Photon</span><span>Vivox</span><span>Node.js</span><span>GCP</span>
+            </div>
+            <p class="project-platform">Steam / Meta Quest / Pico</p>
+          </div>
+        </a>
+
+        <a class="project-card" data-project="xociety">
+          <div class="project-img">
+            <div class="project-placeholder">
+              <span class="project-icon">🎮</span>
+              <div class="project-stats">
+                <span>AAA Grade</span>
+                <span>On-chain</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Xociety <span class="project-arrow">↗</span></h4>
+            <p data-i18n="proj.xo.desc">블록체인 기반 AAA급 게임 메타버스. NFT 캐릭터 커스터마이징과 3D 웹 렌더링 시스템을 개발했습니다.</p>
+            <div class="project-tags">
+              <span>Unreal 5</span><span>C++</span><span>Three.js</span><span>NFT</span><span>IPFS</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" data-project="universe">
+          <div class="project-img">
+            <div class="project-placeholder">
+              <span class="project-icon">🎵</span>
+              <div class="project-stats">
+                <span>24M Downloads</span>
+                <span>Global</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Universe <span class="project-arrow">↗</span></h4>
+            <p data-i18n="proj.uni.desc">NC Soft의 글로벌 K-POP 팬덤 플랫폼. 2,400만 다운로드를 달성했으며, 중국 본토 서비스 및 걸스플래닛999 실시간 투표 시스템을 구축했습니다.</p>
+            <div class="project-tags">
+              <span>Unity</span><span>Kotlin</span><span>Swift</span><span>AWS</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" data-project="yumeiro">
+          <div class="project-img">
+            <div class="project-placeholder">
+              <span class="project-icon">🏡</span>
+              <div class="project-stats">
+                <span>800K DAU</span>
+                <span>LINE Japan</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 data-i18n="proj.ym.name">유메이로가든 <span class="project-arrow">↗</span></h4>
+            <p data-i18n="proj.ym.desc">일본 LINE 플랫폼 소셜 게임. 800K DAU를 달성했으며, 실시간 WebSocket 통신과 5,000개 이상의 아바타 파츠 최적화 시스템을 개발했습니다.</p>
+            <div class="project-tags">
+              <span>Unity</span><span>C#</span><span>Lua</span><span>Phoenix</span><span>WebSocket</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" data-project="anipang">
+          <div class="project-img">
+            <div class="project-placeholder">
+              <span class="project-icon">🧩</span>
+              <div class="project-stats">
+                <span>Live Service</span>
+                <span>20+ Maps/Week</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 data-i18n="proj.ap.name">애니팡3 <span class="project-arrow">↗</span></h4>
+            <p data-i18n="proj.ap.desc">위메이드플레이의 3매치 퍼즐 게임. 에셋번들 시스템과 Lua REPL 도구를 개발하여 매주 20개 이상의 맵을 라이브 업데이트했습니다.</p>
+            <div class="project-tags">
+              <span>Unity</span><span>C#</span><span>Lua</span><span>Spine</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" data-project="booster">
+          <div class="project-img">
+            <div class="project-placeholder">
+              <span class="project-icon">🎹</span>
+              <div class="project-stats">
+                <span>MWC Barcelona</span>
+                <span>4P Real-time</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Booster <span class="project-arrow">↗</span></h4>
+            <p data-i18n="proj.bo.desc">고등학교 시절 스타트업에서 개발한 4인 실시간 리듬게임. MWC 바르셀로나에 출품되었습니다.</p>
+            <div class="project-tags">
+              <span>C++</span><span>Cocos2d-x</span><span>Socket.IO</span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- Awards (compact) -->
+      <section id="awards" class="content-section">
+        <h3 class="section-label" data-i18n="awards.title">수상</h3>
+        <div class="awards-list">
+          <div class="award-row">
+            <span class="award-year">2016</span>
+            <span data-i18n="awards.a1">강남대학교 게임 콘테스트 우수상</span>
+          </div>
+          <div class="award-row">
+            <span class="award-year">2016</span>
+            <span data-i18n="awards.a2">제51회 울산 기능경기대회 은상</span>
+          </div>
+          <div class="award-row">
+            <span class="award-year">2015</span>
+            <span data-i18n="awards.a3">제50회 전국기능경기대회 4위 (게임개발)</span>
+          </div>
+          <div class="award-row">
+            <span class="award-year">2015</span>
+            <span data-i18n="awards.a4">우송대학교 한국 WI 콘텐츠 대회 금상</span>
+          </div>
+          <div class="award-row">
+            <span class="award-year">2015</span>
+            <span data-i18n="awards.a5">제50회 울산 기능경기대회 은상</span>
+          </div>
+          <div class="award-row">
+            <span class="award-year">2015</span>
+            <span data-i18n="awards.a6">MWC 바르셀로나 출품 (Booster)</span>
+          </div>
+          <div class="award-row">
+            <span class="award-year">2014</span>
+            <span data-i18n="awards.a7">우송대학교 한국 WI 콘텐츠 대회 장려상</span>
+          </div>
+          <div class="award-row">
+            <span class="award-year">2013</span>
+            <span data-i18n="awards.a8">위메이드 청소년 게임캠프 기획 특별상</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="content-footer">
+        <p>&copy; 2026 Ha Minjun. All rights reserved.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-sub" id="modalSub"></p>
+      <div class="modal-gallery" id="modalGallery"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-tags" id="modalTags"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
